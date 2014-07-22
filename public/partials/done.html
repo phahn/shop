@@ -1,0 +1,37 @@
+   <div class="row">
+            <div class="columns large-12">
+            <h5>Vielen Dank f&uuml;r Ihre Bestellung! Sie erhalten in K&uuml;rze eine E-Mail mit einer Bestellbest&auml;tigung.</h5>
+            </div>
+            </div>
+
+ <form>
+
+ <div class="row" ng-if="order.customer.newcustomer">
+              <div class="large-12 columns">
+
+ <h5>Sie haben noch keinen Account! Jetzt einen Account anlegen und tolle Vorteile geniessen!</h5>
+
+          <!--Vorname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Passwort</label>
+                <input type="password" ng-model="password">
+              </div>
+          </div>
+
+          <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Passwort (Wiederholung)</label>
+                <input type="password" ng-model="verifyPassword">
+              </div>
+          </div>
+
+          <div class="row">
+          <div class="columns large-12">
+          	<button>Jetzt Account anlegen</button>
+          </div>
+</form>
+</div>
+</div>
+               

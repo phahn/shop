@@ -1,0 +1,42 @@
+
+ <div class="row">
+   <div class="columns large-6">
+     <h5>Existing Customer</h5>
+     <form class="login">
+     <label>E-Mail</label>
+     <input type="text" required ng-model="email">
+     <label for="">Password</label>
+     <input type="password" required ng-model="password">
+     <a class="button" ng-click="checkoutAsExistingCustomer(email, password)">Login</a>
+     <a ng-click="passwordForgotten = true">Forgot Password?</a>
+     </form>
+
+    <div ng-if="passwordForgotten"> 
+    <h5>Password Recovery</h5>
+
+    <form name="form" ng-submit="submitted= true;sendPassword(email_forgotten)" novalidate>
+        <label ng-class="{'error': form.email_forgotten.$invalid && submitted}">
+            E-Mail
+            <input type="email" name="email_forgotten" required ng-model="email_forgotten" ng-model-options="{updateOn: 'blur'}">
+            <span class="error" ng-show="submitted && form.email_forgotten.$error.required">
+    Required!</span>
+  <span class="error" ng-show="form.email_forgotten.$error.email">
+    Not valid email!</span>
+        </label>
+        <button type="submit">Resend Password</button>
+        
+    </form>
+    
+
+
+    </div>
+
+   </div>
+   <div class="columns large-6">
+     <h5>New Customer</h5>
+     <a class="button" ng-click="checkoutAsNewCustomer()">Continue</a>
+   </div>
+ </div>
+
+
+

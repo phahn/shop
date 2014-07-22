@@ -1,0 +1,112 @@
+
+        <form>
+
+          <div class="row">
+            <div class="columns large-12">
+             <input type="radio" ng-model="type" value="invoice">
+              <label>Identisch zu Rechnungsadresse</label>
+              <input type="radio" ng-model="type" value="new">
+              <label>Neue Lieferadresse</label>
+
+              <div ng-if="!order.customer.newcustomer">
+               <input type="radio" ng-model="type" value="existing">
+              <label>Bestehende Lieferadresse auswählen</label>
+              </div>
+            </div>
+          </div>
+
+            <div ng-if="type === 'invoice'">
+         
+          <div class="row">
+            <div class="columns large-12">
+              {{ order.invoiceAddress.address1 }}<br>
+              {{ order.invoiceAddress.address2 }}<br>
+              {{ order.invoiceAddress.address3 }}<br>
+              {{ order.invoiceAddress.zip }} {{ order.invoiceAddress.city }}<br><br>
+            </div>
+          </div>
+          </div>
+
+
+           <div ng-if="!order.customer.newcustomer">
+           <h5>Choose an address</h5>
+          <div class="row">
+            <div class="columns large-12">
+              Pascal Hahn<br>
+              Wendelinusstr. 39<br>
+              76646 Bruchsal
+            </div>
+          </div>
+          </div>
+        
+
+          <div ng-if="type === 'new'">
+          <!--Vorname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Vor- und Nachname</label>
+                <input type="text" ng-model="order.deliveryAddress.address1">
+              </div>
+          </div>
+
+          <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Firmenname (optional)</label>
+                <input type="text" ng-model="order.deliveryAddress.address2">
+              </div>
+          </div>
+
+           <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Straße und Hausnummer</label>
+                <input type="text" ng-model="order.deliveryAddress.address3">
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Postleitzahl</label>
+                <input type="text" ng-model="order.deliveryAddress.zip">
+              </div>
+          </div>
+
+           <div class="row">
+              <div class="large-12 columns">
+                <label>Stadt</label>
+                <input type="text" ng-model="order.deliveryAddress.city">
+              </div>
+          </div>
+
+           
+
+           <div class="row">
+              <div class="large-12 columns">
+                <label>Land</label>
+                <input type="text">
+              </div>
+          </div>
+          </div>
+          
+          <!--
+          <div class="row">
+              <div class="large-12 columns">
+          <div data-alert class="alert-box info radius">
+  Sie haben eine neue Adresse eingegeben. Möchten Sie diese speichern?
+  <a href="#" class="close">&times;</a>
+</div>
+</div>
+</div>-->
+
+<div class="row">
+  <div class="columns large-6"><a class="button" ui-sref="shop.checkout.address">Zur&uuml;ck</a></div>
+   <div class="columns large-6"><a  class="button right" ui-sref="shop.checkout.payment">Weiter</a></div>
+</div>
+
+
+          
+
+          </form>
+
+         

@@ -1,0 +1,92 @@
+
+
+        <form>
+
+          <div class="row" ng-if="!order.customer.newcustomer">
+            <div class="columns large-12">
+              <input type="radio" ng-model="type" value="new">
+              <label>Neue Rechnungsadresse</label>
+
+               <input type="radio" ng-model="type" value="existing">
+              <label>Bestehende Rechnungsadresse auswählen
+            </div>
+          </div>
+
+          <div ng-if="!order.customer.newcustomer">
+          <h5>Choose existing address</h5>
+          <div class="row" >
+            <div class="columns large-12">
+              Pascal Hahn<br>
+              Wendelinusstr. 39<br>
+              76646 Bruchsal
+            </div>
+          </div>
+          </div>
+        
+
+          <!--Vorname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Vor- und Nachname</label>
+                <input type="text" ng-model="order.invoiceAddress.address1">
+              </div>
+          </div>
+
+          <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Firmenname (optional)</label>
+                <input type="text" ng-model="order.invoiceAddress.address2">
+              </div>
+          </div>
+
+           <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Straße und Hausnummer</label>
+                <input type="text" ng-model="order.invoiceAddress.address3">
+              </div>
+          </div>
+
+
+           <div class="row">
+              <div class="large-12 columns">
+                <label>Postleitzahl</label>
+                <input type="text" ng-model="order.invoiceAddress.zip">
+              </div>
+          </div>
+
+
+           <div class="row">
+              <div class="large-12 columns">
+                <label>Stadt</label>
+                <input type="text" ng-model="order.invoiceAddress.city"> 
+              </div>
+          </div>
+
+           <div class="row">
+              <div class="large-12 columns">
+                <label>Land</label>
+                <input type="text" ng-model="order.invoiceAddress.country">
+              </div>
+          </div>
+          
+          <!--
+          <div class="row">
+              <div class="large-12 columns">
+          <div data-alert class="alert-box info radius">
+  Sie haben eine neue Adresse eingegeben. Möchten Sie diese speichern?
+  <a href="#" class="close">&times;</a>
+</div>
+</div>
+</div> -->
+
+         <div class="row">
+  <div class="columns large-6"><a class="button" ui-sref="shop.checkout.data">Zur&uuml;ck</a></div>
+   <div class="columns large-6"><a class="button right" ui-sref="shop.checkout.delivery">Weiter</a></div>
+</div>
+
+          </form>
+
+         
+

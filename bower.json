@@ -1,0 +1,30 @@
+{
+  "name": "shop",
+  "version": "0.0.1",
+  "authors": [
+    "Pascal Hahn <hahnpascal@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "componentsDirectory": "public/components",
+  "directory": "public/components",
+  "dependencies": {
+    "angular": "latest",
+    "angular-resource": "latest",
+    "angularLocalStorage" : "latest",
+    "angular-cookies": "latest",
+    "angular-ui-router": "latest",
+    "foundation": "latest",
+    "angular-ui-utils" : "latest"
+  }
+}

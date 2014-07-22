@@ -1,0 +1,44 @@
+
+          <div class="row">
+            <div class="columns large-12">
+
+            <h5>My Cart</h5>
+
+            <span ng-if="order.cart.articles.length === 0">There are no articles in your cart!</span>
+
+            <table ng-if="order.cart.articles.length > 0">
+  <thead>
+    <tr>
+      <th width="100">SKU</th>
+      <th width="200">Name</th>
+      <th>Description</th>
+      <th width="150">Quantity</th>
+      <th width="150">Price</th>
+      <th width="100">Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="article in order.cart.articles">
+      <td>{{ article.sku }}</td>
+      <td>{{ article.name }}</td>
+      <td>{{ article.description }}</td>
+      <td>{{ article.quantity }}</td>
+      <td>{{ article.price }}</td>
+      <td><button class="alert" ng-click="removeArticle(article)">Remove</button>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+
+
+</div>
+</div>
+
+<div class="row" ng-if="order.cart.articles.length > 0">
+  <div class="columns large-6"><a class="button" ui-sref="shop.login">Checkout</a></div>
+   <div class="columns large-6"><button class="alert right" ng-click="clear()">Clear</button></div>
+</div>
+

@@ -1,0 +1,51 @@
+
+
+        <form name="dataForm" novalidate>
+
+
+          <!--Vorname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Vorname</label>
+                <input type="text" ng-model="order.customer.firstname">
+              </div>
+          </div>
+
+          <!--Nachname -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>Name</label>
+                <input type="text" ng-model="order.customer.name">
+              </div>
+          </div>
+
+           <!-- E-Mail -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label>E-Mail</label>
+                <input type="text" ng-model="order.customer.email" required>
+              </div>
+          </div>
+
+          <!-- E-Mail (Wiederholung) -->
+          <div class="row">
+              <div class="large-12 columns">
+                <label ng-class="{ error : dataForm.email_verify.$error.validator && !dataForm.email_verify.$pristine}" >E-Mail (Wiederholung)
+                <input type="text" name="email_verify" ng-model="order.customer.email_verify" required ui-validate=" '$value==order.customer.email ' "
+ui-validate-watch=" 'order.customer.email' " required>
+                <small ng-show="dataForm.email_verify.$error.validator && !dataForm.email_verify.$pristine" class="error">Email does not match!</small>
+                </label>
+              </div>
+          </div>
+
+         
+<div class="row">
+              <div class="large-12 columns">
+          <a class="button right" ui-sref="shop.checkout.address">Weiter</a>
+          </div>
+          </div>
+
+        
+          </form>
+
+			
