@@ -21,6 +21,7 @@ var files = require("./routes/files");
 var maintenance = require("./routes/maintenance");
 var login = require('./routes/login');
 
+
 var app = express();
 
 // view engine setup
@@ -46,6 +47,7 @@ app.use('/api/schemas', schemas);
 app.use("/api/roles", roles);
 app.use("/api/files", files);
 app.use("/api/maintenance", maintenance);
+app.use("/api/inventory", articles);
 
 app.use("/authenticate", authentication);
 

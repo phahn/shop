@@ -29,6 +29,28 @@ shopApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 		  // Now set up the states
 		  $stateProvider
 
+      .state('admin', {
+        url: '/admin',
+        templateUrl: "/partials/admin.html"
+      })
+
+      .state('admin.inventory', {
+        url: '/inventory',
+        templateUrl: "/partials/inventory.html"
+      })
+
+      .state('admin.inventory.list', {
+        url: '/list',
+        templateUrl: "/partials/inventory-list.html",
+        controller : 'InventoryListController'
+      })
+
+      .state('admin.inventory.detail', {
+        url: '/:slug',
+        templateUrl: "/partials/inventory-detail.html",
+        controller : 'InventoryDetailController'
+      })
+
        // products
       .state('shop', {
         controller: 'ShopController',
