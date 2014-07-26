@@ -1,0 +1,27 @@
+ <div class="row">
+	<div class="columns large-12">
+		 <table ng-if="categories.length > 0">
+		  <thead>
+		    <tr>
+		     
+		      <th width="6000">Name</th>
+		      <th width="100">Edit</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="category in categories">		    
+		      <td>{{ category.name }}</td>
+		      <td><a ui-sref="admin.category-detail({id: category._id})">Edit</a></td>		     
+		    </tr>   
+		  </tbody>
+		</table>
+		<span ng-if="!(categories.length > 0)">No categories found!</span>
+	</div>
+</div>
+
+<div class="row">
+	<div class="columns large-12">
+		<a ui-sref="admin.category-new" class="button">Create new Category</a>
+	</div>
+</div>
+

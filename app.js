@@ -20,6 +20,7 @@ var roles = require("./routes/roles");
 var files = require("./routes/files");
 var maintenance = require("./routes/maintenance");
 var login = require('./routes/login');
+var categories = require("./routes/categories");
 
 
 var app = express();
@@ -47,7 +48,8 @@ app.use('/api/schemas', schemas);
 app.use("/api/roles", roles);
 app.use("/api/files", files);
 app.use("/api/maintenance", maintenance);
-app.use("/api/inventory", articles);
+app.use("/api/inventory/articles", articles);
+app.use("/api/inventory/categories", categories);
 
 app.use("/authenticate", authentication);
 

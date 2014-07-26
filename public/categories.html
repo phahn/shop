@@ -1,0 +1,50 @@
+
+
+
+
+			<div class="row">
+
+
+
+				<div class="large-4 small-12 columns">
+
+				
+
+					<a ui-sref="shop.cart">
+						<div class="panel callout radius">
+							<h6>{{ order.cart.articles.length }}  items in your cart</h6>
+						</div>
+					</a>
+
+				</div>
+
+
+
+
+
+
+				<div class="large-8 columns">
+					<div class="row">
+
+						<div class="large-4 small-6 columns" ng-repeat="article in inventory">
+
+							<a ui-sref="shop.detail">
+							<img src="http://placehold.it/200x200&text=Thumbnail">
+							</a>
+
+							<div class="panel">
+								<h5>{{ article.name }}</h5>
+								<h6 class="subheader">{{ article.price }} €</h6>
+							</div>
+						</div>
+						
+					</div>
+
+
+
+
+
+					
+				</div>
+			</div>
+

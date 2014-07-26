@@ -15,22 +15,7 @@ shopApp.controller('InvoiceAddressController', function($scope) {
 	$scope.type = 'new';
 });
 
-shopApp.controller('ShopController', function($scope, storage) {
 
-	// inventory
-	$scope.inventory = [];
-	for (var i = 0; i < 9; i++) {
-		$scope.inventory.push({
-			sku: '1000' + i,
-			name : 'Article ' + i,
-			price : 20.95,
-			description: 'This is the description for article ' + i
-		});
-	}	
-
-	storage.bind($scope,'order');
-
-});
 
 shopApp.controller('CartController', function($scope,$state) {
 

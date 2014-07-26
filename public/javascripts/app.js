@@ -1,4 +1,4 @@
-var shopApp = angular.module('shopApp', ['ngResource', 'ngCookies' ,'ui.router', 'ui.utils', 'angularLocalStorage']);
+var shopApp = angular.module('shopApp', ['ngResource', 'ngCookies' ,'ui.router', 'ui.utils', 'angularLocalStorage', 'mm.foundation']);
 
 /*shopApp.run(function($rootScope, $urlRouter) {
     $rootScope.$on('$locationChangeSuccess', function(evt) {
@@ -25,101 +25,7 @@ shopApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
        // when there is an empty route, redirect to /index   
       $urlRouterProvider.otherwise('/shop/overview');
 				  
-		  //
-		  // Now set up the states
-		  $stateProvider
-
-      .state('admin', {
-        url: '/admin',
-        templateUrl: "/partials/admin.html"
-      })
-
-      .state('admin.inventory', {
-        url: '/inventory',
-        templateUrl: "/partials/inventory.html"
-      })
-
-      .state('admin.inventory.list', {
-        url: '/list',
-        templateUrl: "/partials/inventory-list.html",
-        controller : 'InventoryListController'
-      })
-
-      .state('admin.inventory.detail', {
-        url: '/:slug',
-        templateUrl: "/partials/inventory-detail.html",
-        controller : 'InventoryDetailController'
-      })
-
-       // products
-      .state('shop', {
-        controller: 'ShopController',
-        abstract: true,
-        url: "/shop",
-        templateUrl: "/partials/shop.html",
-      }) 
-
-      .state('shop.overview', {
-        url: "/overview",
-        templateUrl: "/partials/overview.html",
-      })
-
-      .state('shop.detail', {
-        url: "/detail",
-        templateUrl: "/partials/detail.html",
-        controller : 'DetailController'
-      })
 		  
-      .state('shop.login', {
-          url: '/login',
-          templateUrl: '/partials/login.html'  ,
-          controller: 'LoginController'        
-      })
-
-      .state('shop.cart', {
-        url: '/cart',
-        templateUrl: '/partials/cart.html',
-        controller: 'CartController'
-      })
-
-      .state('shop.checkout', {
-        url: '/checkout',
-        templateUrl: '/partials/checkout.html',
-        controller: 'CheckoutController'
-      })
-
-      .state('shop.checkout.data', {
-          url: '/data',
-          templateUrl: '/partials/data.html',
-          controller: 'MyDataController'      
-      })
-
-      .state('shop.checkout.address', {
-          url: '/address',
-          templateUrl: '/partials/address.html' ,
-          controller: 'InvoiceAddressController'         
-      })
-
-      .state('shop.checkout.delivery', {
-          url: '/delivery',
-          templateUrl: '/partials/delivery.html',
-          controller: 'DeliveryAddressController'       
-      })
-
-      .state('shop.checkout.payment', {
-          url: '/payment',
-          templateUrl: '/partials/payment.html'      
-      })
-
-      .state('shop.checkout.confirmation', {
-          url: '/confirmation',
-          templateUrl: '/partials/confirmation.html'      
-      })
-
-      .state('shop.checkout.done', {
-          url: '/done',
-          templateUrl: '/partials/done.html'      
-      })
         
 });
 

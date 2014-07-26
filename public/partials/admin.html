@@ -1,1 +1,42 @@
+
+
+
+
+			<div class="row">
+				<div class="large-12 columns">
+
+					<top-bar>
+						<ul class="title-area">
+
+							<li class="name">
+								<h1>
+									<a ui-sref="admin">
+										Administration
+									</a>
+								</h1>
+							</li>
+							<li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+						</ul>
+
+						 <top-bar-section>
+
+							<ul class="right">
+								<li class="divider"></li>
+								<li has-dropdown>
+									<a>Inventory</a>
+									<ul top-bar-dropdown>
+										<li><a ui-sref="admin.categories">Categories</a></li>
+										<li><a ui-sref="admin.articles">Articles</a></li>
+									</ul>
+								</li>								
+								<li><a ui-sref="admin.customers">Customers</a></li>
+								<li class="divider"></li>
+								<li><a ui-sref="admin.settings">Settings</a></li>								
+							</ul>
+						</top-bar-section>
+					</top-bar>
+
+				</div>
+			</div>
+
 <div ui-view></div>
